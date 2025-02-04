@@ -1,0 +1,43 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9а класс</title>
+    <link rel="stylesheet" href="assets/css/fancybox.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/fancybox.js"></script>
+    <script src="assets/js/masonry.js"></script>
+    <script src="assets/js/imagesloaded.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        9а класс
+        <br />
+        <span>24 декабря 2024</span>
+      </h1>
+      <a href="javascript:void(0);" id="scrollToGallery" class="arrow-down"
+        >↓</a
+      >
+    </header>
+    <div id="gallerys"></div>
+    <div id="gallery"></div>
+    <script src="assets/js/app.js"></script>
+    <script>
+      // JavaScript для плавного скролла
+
+      function scrollSmooth() {
+        const gallerys = document.getElementById("gallerys");
+        gallerys.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      const scrollToGallery = document.getElementById("scrollToGallery");
+      document.addEventListener("DOMContentLoaded", () => {
+        scrollSmooth();
+        setTimeout(() => {
+          scrollSmooth();
+        });
+        scrollToGallery.addEventListener("click", scrollSmooth);
+      });
+    </script>
+  </body>
+</html>
